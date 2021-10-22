@@ -1,12 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 
 function App() {
   const [createdata, Setcreatedata] = useState({
+    image: "",
     name: "",
     genre: "",
     system: "",
+    release_date: ""
   });
   const [favorite, Setfavorite] = useState([]);
   const [gamedata, Setgamedata] = useState([
@@ -137,7 +138,7 @@ function App() {
         name="Release Date"
         placeholder="Release Date"
         className="input-text"
-        value={createdata.name}
+        value={createdata.release_date}
         onChange={(e) => Setcreatedata({ ...createdata, release_date: e.target.value })}
       />
 
@@ -149,25 +150,12 @@ function App() {
         
         Add new game!
       </button>
-      <h1>Games</h1>
+      <h1 name="gameList">Games</h1>
       {gamedata.map(rendergame)}
-      <h1>Favorites</h1>
+      <h1 name="favList">Favorites</h1>
       {favorite.map(rendergame)}
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
     </div>
   );
 }
