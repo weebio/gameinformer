@@ -1,7 +1,80 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
-.gamelist{
+.Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.GameImage {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.Game {
+  width: 400px;
+  margin: 20px; /* space between elements past edge */
+  padding: 10px; /* space within element at edge */
+  background-color: #303040;
+  border-radius: 8px;
+
+  animation-duration: 1s;
+  animation-name: show;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.GameList {
+  width: 460px;
+  margin: 10px;
+  
+}
+
+.controlbutton {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 30px;
+  outline: 2px;
+  background-color: #fa8805;
+}
+
+.Topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* padding: 20px; */
+  background-color: #303040;
+}
+
+.Topbar > * {
+  /* > is the child selector, this selects all children of Topbar */
+  margin: 10px;
+}
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+h2 {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
 }
